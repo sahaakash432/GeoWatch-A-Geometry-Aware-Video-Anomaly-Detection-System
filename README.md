@@ -1,47 +1,101 @@
-📌 GeoWatch: Geometry-Aware Video Anomaly Detection
+# 📌 GeoWatch: Geometry-Aware Video Anomaly Detection
 
-GeoWatch is a computer vision project that combines deep learning + geometric reasoning to improve video anomaly detection.
-Instead of relying only on model confidence, it uses real-world spatial constraints (via homography) to make more reliable decisions.
+## 📖 Overview
 
+GeoWatch is a computer vision project that combines deep learning and geometric reasoning to improve video anomaly detection.
 
-🚀 Pipeline
+Instead of relying only on model confidence, it incorporates real-world spatial constraints using homography, enabling more reliable and context-aware anomaly detection.
+
+---
+
+## 🚀 Pipeline
+
+```
 Video → Detection (YOLOv8) → Tracking → Homography Mapping
       → I3D Classification → Geometric Validation → Anomaly
+```
 
+---
 
-🧠 Key Ideas
+## 🧠 Key Ideas
 
-I3D for spatiotemporal action recognition
+* **I3D** for spatiotemporal action recognition
+* **YOLOv8 + tracking** for accurate person localization
+* **Homography mapping** to estimate real-world position and speed
+* **Geometry-aware filtering** to reduce false positives
 
-YOLOv8 + tracking for person localization
+---
 
-Homography to estimate real-world position & speed
+## 📊 Results
 
-Geometry-aware filtering to reduce false positives
+* ~85% validation accuracy (on a small dataset)
+* Geometry-based reasoning helps reduce false positives, especially near image boundaries
 
+---
 
-📊 Results
+## ⚠️ Limitations
 
-~85% validation accuracy (small dataset)
+* Small custom dataset
+* Manual camera calibration required
+* Multi-camera setup (epipolar geometry) not fully implemented
 
-Geometry helps reduce false positives, especially near image edges
+---
 
+## 🔮 Future Work
 
-⚠️ Limitations
+* Expand dataset size and diversity
+* Automate camera calibration
+* Integrate multi-camera system
+* Explore advanced video models (e.g., SlowFast, Video Swin)
 
-Small custom dataset
+---
 
-Manual calibration
+## 🛠️ Technologies Used
 
-Multi-camera (epipolar) not fully integrated
+* Python
+* PyTorch
+* OpenCV
+* YOLOv8
+* I3D (Inflated 3D ConvNet)
 
+---
 
-🔮 Future Work
+## ▶️ Usage
 
-Larger dataset
+1. Clone the repository:
 
-Automatic calibration
+```
+git clone https://github.com/your-username/geowatch.git
+```
 
-Multi-camera setup
+2. Navigate to the project directory:
 
-Newer video models (e.g., SlowFast, Video Swin)
+```
+cd geowatch
+```
+
+3. Install dependencies:
+
+```
+pip install -r requirements.txt
+```
+
+4. Run the pipeline:
+
+```
+python main.py
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+---
