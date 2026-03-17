@@ -12,27 +12,36 @@ Video → Detection (YOLOv8) → Tracking → Homography Mapping
 🧠 Key Ideas
 
 I3D for spatiotemporal action recognition
+
 YOLOv8 + tracking for person localization
+
 Homography to estimate real-world position & speed
+
 Geometry-aware filtering to reduce false positives
 
 
 📊 Results
 
 ~85% validation accuracy (small dataset)
+
 Geometry helps reduce false positives, especially near image edges
 
 
 ⚠️ Limitations
 
 Small custom dataset
+
 Manual calibration
+
 Multi-camera (epipolar) not fully integrated
 
 
 🔮 Future Work
 
 Larger dataset
+
 Automatic calibration
+
 Multi-camera setup
+
 Newer video models (e.g., SlowFast, Video Swin)
